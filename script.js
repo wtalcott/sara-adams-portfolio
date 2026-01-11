@@ -132,19 +132,24 @@ if (contactForm) {
     });
 }
 
-// GeoCities Easter Egg - Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
-const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
-let konamiIndex = 0;
+// GeoCities Easter Egg - Type "geocities" anywhere on the page
+let typedKeys = '';
 
 document.addEventListener('keydown', (e) => {
-    if (e.code === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-            activateGeoCities();
-            konamiIndex = 0;
+    // Only track letter keys
+    if (e.key.length === 1 && e.key.match(/[a-z]/i)) {
+        typedKeys += e.key.toLowerCase();
+
+        // Keep only last 9 characters
+        if (typedKeys.length > 9) {
+            typedKeys = typedKeys.slice(-9);
         }
-    } else {
-        konamiIndex = 0;
+
+        // Check for "geocities"
+        if (typedKeys === 'geocities') {
+            activateGeoCities();
+            typedKeys = '';
+        }
     }
 });
 
