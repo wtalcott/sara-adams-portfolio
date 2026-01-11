@@ -600,3 +600,183 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* GeoCities Easter Egg Mode */
+[data-theme="geocities"] {
+    --bg-primary: #000080;
+    --bg-secondary: #000066;
+    --text-primary: #ffff00;
+    --text-secondary: #00ffff;
+    --accent: #ff00ff;
+    --accent-hover: #ff69b4;
+    --nav-bg: #800080;
+    --card-bg: #000066;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">✨</text></svg>'), auto;
+}
+
+[data-theme="geocities"] body,
+[data-theme="geocities"] {
+    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+    background: repeating-linear-gradient(
+        45deg,
+        #000080,
+        #000080 10px,
+        #000066 10px,
+        #000066 20px
+    ) !important;
+}
+
+[data-theme="geocities"] * {
+    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+[data-theme="geocities"] .hero {
+    background: linear-gradient(180deg, #ff00ff, #0000ff, #00ffff) !important;
+    animation: geocities-rainbow 3s ease infinite;
+}
+
+@keyframes geocities-rainbow {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(60deg); }
+}
+
+[data-theme="geocities"] .hero h1 {
+    color: #ffff00 !important;
+    text-shadow: 3px 3px #ff0000, -3px -3px #00ff00;
+    animation: geocities-blink 0.5s step-end infinite;
+}
+
+@keyframes geocities-blink {
+    50% { opacity: 0.7; }
+}
+
+[data-theme="geocities"] .highlight {
+    color: #00ff00 !important;
+    animation: geocities-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes geocities-glow {
+    from { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; }
+    to { text-shadow: 0 0 20px #00ff00, 0 0 30px #ff00ff; }
+}
+
+[data-theme="geocities"] .btn {
+    background: linear-gradient(180deg, #ff0000, #990000) !important;
+    border: 3px outset #ff6666 !important;
+    text-shadow: 1px 1px #000;
+    animation: geocities-pulse 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes geocities-pulse {
+    to { transform: scale(1.05); }
+}
+
+[data-theme="geocities"] .section h2 {
+    color: #ff00ff !important;
+    text-shadow: 2px 2px #00ffff;
+    text-decoration: underline wavy #ffff00;
+}
+
+[data-theme="geocities"] .project-card {
+    border: 3px ridge #00ffff !important;
+    background: #000066 !important;
+    box-shadow: 5px 5px 0 #ff00ff;
+}
+
+[data-theme="geocities"] .project-card h3 {
+    color: #00ff00 !important;
+}
+
+[data-theme="geocities"] .project-card p {
+    color: #ffffff !important;
+}
+
+[data-theme="geocities"] .performance-date {
+    color: #ffff00 !important;
+    animation: geocities-blink 1s step-end infinite;
+}
+
+[data-theme="geocities"] .headshot {
+    border: 5px ridge #ff00ff !important;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+[data-theme="geocities"] .skill-bar {
+    background: #333 !important;
+    border: 2px inset #666 !important;
+}
+
+[data-theme="geocities"] .skill-level {
+    background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff) !important;
+    animation: geocities-rainbow 2s linear infinite;
+}
+
+[data-theme="geocities"] nav {
+    background: linear-gradient(180deg, #800080, #4B0082) !important;
+    border-bottom: 3px ridge #ff00ff;
+}
+
+[data-theme="geocities"] .nav-links a {
+    color: #00ffff !important;
+}
+
+[data-theme="geocities"] .nav-links a:hover {
+    color: #ffff00 !important;
+}
+
+[data-theme="geocities"] footer {
+    background: #800080 !important;
+    border-top: 5px ridge #00ffff;
+}
+
+[data-theme="geocities"] .contact-form input,
+[data-theme="geocities"] .contact-form textarea,
+[data-theme="geocities"] .contact-form select {
+    background: #000066 !important;
+    border: 3px inset #00ffff !important;
+    color: #00ff00 !important;
+}
+
+[data-theme="geocities"] .social-links a {
+    color: #ff00ff !important;
+}
+
+[data-theme="geocities"] .gallery-item {
+    border: 3px ridge #ff00ff !important;
+}
+
+[data-theme="geocities"] .gallery-placeholder {
+    background: linear-gradient(45deg, #ff00ff, #00ffff) !important;
+    color: #ffff00 !important;
+    font-weight: bold;
+}
+
+[data-theme="geocities"] .geocities-banner {
+    display: block !important;
+}
+
+.geocities-banner {
+    display: none;
+    background: #ffff00;
+    color: #ff0000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    border-top: 3px ridge #ff0000;
+    animation: geocities-marquee 10s linear infinite;
+}
+
+@keyframes geocities-marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+[data-theme="geocities"] .training-info li {
+    color: #00ffff !important;
+    border-color: #ff00ff !important;
+}

@@ -131,3 +131,64 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+// GeoCities Easter Egg - Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === konamiCode[konamiIndex]) {
+        konamiIndex++;
+        if (konamiIndex === konamiCode.length) {
+            activateGeoCities();
+            konamiIndex = 0;
+        }
+    } else {
+        konamiIndex = 0;
+    }
+});
+
+// Also activate by clicking the logo 5 times
+let logoClicks = 0;
+let logoClickTimer;
+const logo = document.querySelector('.logo');
+
+if (logo) {
+    logo.addEventListener('click', (e) => {
+        e.preventDefault();
+        logoClicks++;
+
+        clearTimeout(logoClickTimer);
+        logoClickTimer = setTimeout(() => {
+            logoClicks = 0;
+        }, 2000);
+
+        if (logoClicks >= 5) {
+            activateGeoCities();
+            logoClicks = 0;
+        }
+    });
+}
+
+function activateGeoCities() {
+    const currentTheme = document.body.getAttribute('data-theme');
+
+    if (currentTheme === 'geocities') {
+        // Turn off GeoCities mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        localStorage.removeItem('geocities');
+    } else {
+        // Activate GeoCities mode
+        document.body.setAttribute('data-theme', 'geocities');
+        localStorage.setItem('geocities', 'true');
+
+        // Play a fun alert
+        alert('🚧 WELCOME TO 1999! 🚧\n\nGeoCities mode activated!\n\n(Click logo 5 times or use Konami code again to exit)');
+    }
+}
+
+// Check if GeoCities was previously activated
+if (localStorage.getItem('geocities') === 'true') {
+    document.body.setAttribute('data-theme', 'geocities');
+}
