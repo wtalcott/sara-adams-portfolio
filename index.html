@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Adams - Ballet Dancer | New York City Ballet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Sara Adams</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#performances">Performances</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#skills">Training</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun-icon">&#9728;</span>
+                <span class="moon-icon">&#9790;</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>Sara <span class="highlight">Adams</span></h1>
+            <p>Principal Dancer | New York City Ballet</p>
+            <a href="#contact" class="btn">Book for Events</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2 class="fade-in">About Me</h2>
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <p>Welcome! I'm Sara Adams, a principal dancer with the New York City Ballet. My journey in ballet began at age five, and dance has been my passion and purpose ever since.</p>
+                <p>Trained at the School of American Ballet, I joined NYCB's corps de ballet in 2018 and was promoted to principal dancer in 2023. I've had the honor of performing lead roles in works by Balanchine, Robbins, and contemporary choreographers.</p>
+                <p>When I'm not on stage, I'm dedicated to teaching the next generation of dancers and advocating for arts education in schools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="performances" class="section alt-bg">
+        <h2 class="fade-in">Featured Performances</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <h3>Swan Lake</h3>
+                <p>Odette/Odile - A demanding dual role showcasing both the ethereal White Swan and the seductive Black Swan.</p>
+                <span class="performance-date">Spring 2025 Season</span>
+            </div>
+            <div class="project-card fade-in">
+                <h3>The Nutcracker</h3>
+                <p>Sugar Plum Fairy - A beloved holiday tradition, performing George Balanchine's iconic choreography.</p>
+                <span class="performance-date">Winter 2024 Season</span>
+            </div>
+            <div class="project-card fade-in">
+                <h3>Serenade</h3>
+                <p>Lead Waltz - Balanchine's first American ballet, a stunning display of classical technique and artistry.</p>
+                <span class="performance-date">Fall 2024 Season</span>
+            </div>
+            <div class="project-card fade-in">
+                <h3>Romeo + Juliet</h3>
+                <p>Juliet - A dramatic narrative ballet showcasing both technical prowess and emotional depth.</p>
+                <span class="performance-date">Spring 2024 Season</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="fade-in">Gallery</h2>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item" data-caption="Swan Lake - Odette">
+                <div class="gallery-placeholder">Photo 1</div>
+            </div>
+            <div class="gallery-item" data-caption="The Nutcracker - Sugar Plum Fairy">
+                <div class="gallery-placeholder">Photo 2</div>
+            </div>
+            <div class="gallery-item" data-caption="Serenade - Lead Waltz">
+                <div class="gallery-placeholder">Photo 3</div>
+            </div>
+            <div class="gallery-item" data-caption="Behind the Scenes - Rehearsal">
+                <div class="gallery-placeholder">Photo 4</div>
+            </div>
+            <div class="gallery-item" data-caption="Romeo + Juliet - Balcony Scene">
+                <div class="gallery-placeholder">Photo 5</div>
+            </div>
+            <div class="gallery-item" data-caption="Company Class">
+                <div class="gallery-placeholder">Photo 6</div>
+            </div>
+        </div>
+        <p class="gallery-note">Replace placeholders with your own performance photos</p>
+    </section>
+
+    <section id="skills" class="section alt-bg">
+        <h2 class="fade-in">Training & Expertise</h2>
+        <div class="skills-grid fade-in">
+            <div class="skill-item">
+                <h3>Classical Ballet</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 98%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <h3>Contemporary</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <h3>Pointe Work</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 98%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <h3>Partnering</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <h3>Character Dance</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <h3>Choreography</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+            </div>
+        </div>
+        <div class="training-info fade-in">
+            <h3>Education</h3>
+            <ul>
+                <li>School of American Ballet (2010-2018)</li>
+                <li>Summer Intensive - Royal Ballet School, London</li>
+                <li>Guest training - Paris Opera Ballet School</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="fade-in">Get in Touch</h2>
+        <div class="contact-content fade-in">
+            <p>For booking inquiries, collaborations, or press requests, please reach out below.</p>
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="inquiry" required>
+                    <option value="" disabled selected>Type of Inquiry</option>
+                    <option value="booking">Performance Booking</option>
+                    <option value="teaching">Teaching/Masterclass</option>
+                    <option value="press">Press/Media</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sara Adams. All rights reserved.</p>
+        <p class="footer-note">New York City Ballet</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
