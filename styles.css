@@ -227,6 +227,14 @@ nav {
     text-align: center;
 }
 
+.headshot {
+    width: 280px;
+    height: auto;
+    margin-bottom: 2.5rem;
+    filter: grayscale(0);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
 .about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
